@@ -1,0 +1,58 @@
+This a sort of plan for the thing i would like to study on. This test file act as a reminder of the things left to do.
+This is a big list, and it is my duty to master all of them before I graduate.
+SO stop wasting your time and lets get started.
+
+#Programming Languages
+- Python
+- C++
+
+#AI tools
+- Chatgpt
+- Google Gemini
+- Meta AI
+- Leonardo AI
+- Bing
+- Gamma AI
+- Midjourney
+
+#Data Manipulation
+- Numpy
+- Pandas
+- Polars
+
+#Data Visualization
+- Matplotlib
+- Seaborn
+- D3.js (optional)
+
+#Machine learning
+- scikit-learn
+
+#Deep learning
+- Tenserflow
+- Pytorch
+
+#Natural language processing
+- NLTK
+
+#Computer vision
+- Open CV
+
+#Generative AI
+- Hugging face transformer
+- Hugging face diffuser
+- Mistral Ai
+- Langchain
+- JAX
+- Llama Indedx
+- Weight and Biases
+
+#Other
+- MLOPS
+- Cloud Engineering
+- DSA
+- Dynamic programming
+- Competetive programming
+- Adreuno
+- Rasberry PI
+- Quantum Computing
