@@ -104,10 +104,10 @@ medium_win=0 #no of wins in medium mode
 hard_win=0 #no of wins in hard mode
 total_error=0 #total no of mistakes done
 
-"""
+
 ###############################################################
 #Mysql database related(comment all of the part once the database is created)
-con=mysql.connector.connect(host="localhost", user="root", password="admin")
+con=mysql.connector.connect(host="localhost", user="root", password="Admin2003", auth_plugin = "mysql_native_password")
 cur=con.cursor()
 
 query="create database megamind;"
@@ -130,10 +130,10 @@ cur.execute(query)
 con.commit() #permanently save data in mysql
 print("Database created successfully")
 ###################################################################   
-"""
+
 
 #connecting to database for every time use
-con=mysql.connector.connect(host="localhost", user="root", password="admin", database="megamind")
+con=mysql.connector.connect(host="localhost", user="root", password="Admin2003", database="megamind")
 cur=con.cursor()
 
 
@@ -278,7 +278,7 @@ while True:
                         print("\n"*3)
 
         elif main_choice=='4': #accounts option
-                con=mysql.connector.connect(host="localhost", user="root", password="admin", database="megamind")
+                con=mysql.connector.connect(host="localhost", user="root", password="Admin2003", database="megamind")
                 cur=con.cursor()
                 print("What action would you like to do?")
                 print("1» Create account") #line 289
@@ -289,7 +289,7 @@ while True:
                 choice=input("Enter your choice:")
 
                 if choice=='1': #create account option
-                        con=mysql.connector.connect(host="localhost", user="root", password="admin", database="megamind")
+                        con=mysql.connector.connect(host="localhost", user="root", password="Admin2003", database="megamind")
                         cur=con.cursor()
                         query="select * from login_details"
                         cur.execute(query)
@@ -315,7 +315,7 @@ while True:
                                 print("\n"*3)
                                 
                 elif choice=='2': #login account option
-                        con=mysql.connector.connect(host="localhost", user="root", password="admin", database="megamind")
+                        con=mysql.connector.connect(host="localhost", user="root", password="Admin2003", database="megamind")
                         cur=con.cursor()
                         user_name=input("Please enter user_name:")
                         user_password=input("Please enter password:")
@@ -347,7 +347,7 @@ while True:
                                 print("\n"*3)
 
                 elif choice=='3': #delete account option
-                        con=mysql.connector.connect(host="localhost", user="root", password="admin", database="megamind")
+                        con=mysql.connector.connect(host="localhost", user="root", password="Admin2003", database="megamind")
                         cur=con.cursor()
                         confirm=input("Are you sure to delete the account? (y/n):")
                         if confirm.lower()=='y':
@@ -371,7 +371,7 @@ while True:
                                         print("\n"*3)
 
                 elif choice=='4': #refresh account option
-                        con=mysql.connector.connect(host="localhost", user="root", password="admin", database="megamind")
+                        con=mysql.connector.connect(host="localhost", user="root", password="Admin2003", database="megamind")
                         cur=con.cursor()
                         #this option saves all the data into the database so that in case the system crashes no data will be lost, inspired by many offline games.
                         query="select * from score_details where account_name='{}'".format(player_name)
@@ -387,7 +387,7 @@ while True:
                         print("\n"*3)
 
                 elif choice=='5': #change password option
-                        con=mysql.connector.connect(host="localhost", user="root", password="admin",database="megamind")
+                        con=mysql.connector.connect(host="localhost", user="root", password="Admin2003",database="megamind")
                         cur=con.cursor()
                         confirm=input("Are you sure to change password? (y/n):")
                         if confirm.lower()=='y':
@@ -430,11 +430,9 @@ while True:
                 print("Number of wins in hard mode » ", hard_win)
                 print("Number of wrong answers made » ", total_error)
                 if total_play<=0:
-                	print("Average mistakes made » 0")
-                	print("\n")
+                        print("Average mistakes made » 0\n")
                 else:
-                	print("Average mistakes made » ", total_error/total_play)
-                	print("\n")
+                	print("Average mistakes made » ", total_error/total_play, "\n")
 
                 #this part is to give ranking based on the score, just for decorration purpose
                 if total_score<=0:
